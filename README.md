@@ -1,10 +1,11 @@
 # Prettify JSON
 
-[TODO. There will be project description]
+Make your json file human-friendly to read
+
 
 # Quickstart
 
-[TODO]
+Run this script with Python 3.x. As a parameter you have to specify path to json file
 
 Example of script launch on Linux, Python 3.5:
 
