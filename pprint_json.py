@@ -2,17 +2,17 @@ import json
 import sys
 
 
-def load_data(filepath):
-    print(filepath + "!!!")
-    data = ""
-    with open(filepath, "r", encoding="utf-8") as f:
-        for line in f:
-            data += line
-    return data
+def load_data(json_filepath):
+    print(json_filepath + "!!!")
+    json_data = ""
+    with open(json_filepath, "r", encoding="utf-8") as file:
+        for line in file:
+            json_data += line
+    return json_data
 
 
-def pretty_print_json(data):
-    print(json.dumps(json.loads(data, encoding="utf-8"), indent=4, ensure_ascii=False))
+def pretty_print_json(json_data):
+    print(json.dumps(json.loads(json_data, encoding="utf-8"), indent=4, ensure_ascii=False))
 
 
 if __name__ == '__main__':
