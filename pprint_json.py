@@ -4,7 +4,6 @@ import sys
 
 def load_data(json_filepath):
     with open(json_filepath, "r", encoding="utf-8") as file:
-        print(type(file))
         json_data = file.read()
     return json_data
 
