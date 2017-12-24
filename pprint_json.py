@@ -19,6 +19,6 @@ def pretty_print_json(json_data):
 
 
 if __name__ == "__main__":
-    if len(sys.argv[0:]) == 2:
+    if len(sys.argv[:]) == 2:
         json_data = load_data(sys.argv[1])
         pretty_print_json(json_data)
