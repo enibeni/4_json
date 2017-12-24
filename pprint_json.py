@@ -1,17 +1,24 @@
 import json
 import sys
+import os
 
 
 def load_data(json_filepath):
+    if not os.path.exists(json_filepath):
+        return None
     with open(json_filepath, "r", encoding="utf-8") as file:
-        json_data = file.read()
-    return json_data
+        return json.load(file)
 
 
 def pretty_print_json(json_data):
-    print(json.dumps(json.loads(json_data),
-                     indent=4, ensure_ascii=False))
+    print(json.dumps(
+        json_data,
+        indent=4,
+        ensure_ascii=False)
+    )
 
 
 if __name__ == "__main__":
-    pretty_print_json(load_data(sys.argv[1]))
+    if len(sys.argv[0:]) == 2:
+        json_data = load_data(sys.argv[1])
+        pretty_print_json(json_data)
